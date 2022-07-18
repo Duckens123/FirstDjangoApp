@@ -1,0 +1,10 @@
+{% extends 'listings/base.html' %}
+{% block content %}
+        <h1>My first web page using django</h1>
+
+        <ul>
+            {% for band in bands %}
+            <li> <a href="{% url 'band_detail' band.id %}">{{ band.name|upper }}</a></li>
+            {% endfor %}
+        </ul>        
+{% endblock %}
